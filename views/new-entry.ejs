@@ -1,0 +1,32 @@
+<head>
+    <%- include ("partials/head") %>
+    <title> <%= title %> </title>
+</head>
+<body class="container">
+    <%- include ("partials/header") %>
+    <div class="col-xs-8 col-xs-offset-2">
+        <h2 class="text-center">Escribi la nueva tarea</h2>
+        <form method="POST">
+            <div class="form-group">
+                <label for="title">Titulo:</label>
+                    <input type="text"
+                    name="title"
+                    id="title"
+                    class="form-control"
+                    placeholder="escribi un titulo"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="body">Descripcion:</label>
+                <textarea class="form-control" name="body" id="body"  rows="3" placeholder="escribi una descripción" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-primary">
+            </div>
+            </div>
+        </form>
+    
+</body>
+</html>

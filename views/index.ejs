@@ -1,0 +1,30 @@
+    <head>
+        <%- include ("partials/head") %>
+        <title> <%= title %> </title>
+    </head>
+    
+    
+<body class="container border">
+   <%- include ("partials/header") %>
+
+    <% if (entries.length) {  %>
+        <% entries.forEach(function(entry){ %>
+            
+            <div class="card text-white bg-primary mb-8 " >
+                <div class="card-header">
+                   Tarea: <%= entry.title %> 
+                    </div>
+                </div>
+                <div class="card-text bg-light  b mb-8">
+                  Descripción:  <%= entry.content %>
+                </div>
+
+            </div>
+
+        <% })%>
+    <% } else { %>
+        <p>No existen tareas</p>
+        <% } %>
+    
+</body>
+</html>
